@@ -1,0 +1,48 @@
+# Android Run Time
+ro.sys.fw.dex2oat_thread_count=4
+
+# ActivityManager
+ro.config.max_starting_bg=8
+ro.sys.fw.use_trim_settings=true
+
+ro.config.ipv4.mtu=1400
+media.stagefright.use-awesome=false
+ro.config.hw_dts=true
+ro.config.widevine_level3=true
+drm.service.enabled=true
+ro.media.radar=0
+ro.config.enable_iaware=true
+
+ro.hardware.alter=Hisilicon Kirin 950
+persist.sys.fingersense=1
+ro.opengles.version=196610
+ro.sf.lcd_density=480
+
+# Camera
+camera.hal1.packagelist=com.google.android.GoogleCamera
+
+# local
+net.tethering.noprovisioning=true
+ro.config.hw_lte_support=true
+persist.radio.infrared_switch=true
+ro.frp.pst=/dev/block/platform/hi_mci.0/by-name/frp
+gsm.fastdormancy.mode=3
+
+# Performance
+ro.am.reschedule_service=true
+
+# RIL
+ro.multi.rild=false
+rild.rild1_ready_to_start=false
+ro.config.is_start_commril=true
+ro.config.hw_save_pin=true
+ro.config.hw_volte_on=true
+ro.config.hw_volte_dyn=true
+persist.radio.infrared_switch=true
+
+ro.telephony.ril_class=HwHisiRIL
+audioril.lib=libhuawei-audio-ril.so
+persist.radio.apm_sim_not_pwdn=1
+
+# Storage
+#ro.sys.sdcardfs=true

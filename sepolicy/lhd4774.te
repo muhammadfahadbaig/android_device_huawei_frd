@@ -1,0 +1,6 @@
+# ipld daemon
+type lhd4774, domain, domain_deprecated;
+type lhd4774_exec, exec_type, file_type;
+
+# Started by init
+init_daemon_domain(lhd4774)

@@ -1,0 +1,47 @@
+--- a/frameworks/base/core/res/res/values/attrs.xml
++++ b/frameworks/base/core/res/res/values/attrs.xml
+@@ -1839,6 +1839,7 @@
+         <enum name="KEYCODE_SYSTEM_NAVIGATION_DOWN" value="281" />
+         <enum name="KEYCODE_SYSTEM_NAVIGATION_LEFT" value="282" />
+         <enum name="KEYCODE_SYSTEM_NAVIGATION_RIGHT" value="283" />
++        <enum name="KEYCODE_SMART_KEY" value="284" />
+     </attr>
+ 
+     <!-- ***************************************************************** -->
+
+
+--- a/frameworks/base/core/java/android/view/KeyEvent.java
++++ b/frameworks/base/core/java/android/view/KeyEvent.java
+@@ -804,8 +804,10 @@
+     public static final int KEYCODE_SYSTEM_NAVIGATION_LEFT = 282;
+     /** Key code constant: Consumed by the system for navigation right */
+     public static final int KEYCODE_SYSTEM_NAVIGATION_RIGHT = 283;
++    /** Key code constant: Huawei Smart Key (clickable back Fingerprint Scanner button) */
++    public static final int KEYCODE_SMART_KEY = 284;
+ 
+-    private static final int LAST_KEYCODE = KEYCODE_SYSTEM_NAVIGATION_RIGHT;
++    private static final int LAST_KEYCODE = KEYCODE_SMART_KEY;
+ 
+     // NOTE: If you add a new keycode here you must also add it to:
+     //  isSystem()
+@@ -1857,6 +1859,7 @@
+             case KeyEvent.KEYCODE_SYSTEM_NAVIGATION_DOWN:
+             case KeyEvent.KEYCODE_SYSTEM_NAVIGATION_LEFT:
+             case KeyEvent.KEYCODE_SYSTEM_NAVIGATION_RIGHT:
++            case KeyEvent.KEYCODE_SMART_KEY:
+                 return true;
+         }
+	 
+	 
+--- a/frameworks/base/data/keyboards/Generic.kl
++++ b/frameworks/base/data/keyboards/Generic.kl
+@@ -407,6 +407,9 @@
+ key 580   APP_SWITCH
+ key 582   VOICE_ASSIST
+ 
++# Smart Key
++key 194 SMART_KEY
++
+ # Keys defined by HID usages
+ key usage 0x0c006F BRIGHTNESS_UP
+ key usage 0x0c0070 BRIGHTNESS_DOWN

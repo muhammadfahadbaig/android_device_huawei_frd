@@ -1,0 +1,25 @@
+--- a/frameworks/native/include/android/keycodes.h
++++ b/frameworks/native/include/android/keycodes.h
+@@ -765,7 +765,9 @@
+     /** fingerprint navigation key, left. */
+     AKEYCODE_SYSTEM_NAVIGATION_LEFT = 282,
+     /** fingerprint navigation key, right. */
+-    AKEYCODE_SYSTEM_NAVIGATION_RIGHT = 283
++    AKEYCODE_SYSTEM_NAVIGATION_RIGHT = 283,
++    /** smart key */
++    AKEYCODE_SMART_KEY = 284
+ 
+     // NOTE: If you add a new keycode here you must also add it to several other files.
+     //       Refer to frameworks/base/core/java/android/view/KeyEvent.java for the full list.
+	 
+	 
+--- a/frameworks/native/include/input/InputEventLabels.h
++++ b/frameworks/native/include/input/InputEventLabels.h
+@@ -323,6 +323,7 @@
+     DEFINE_KEYCODE(SYSTEM_NAVIGATION_DOWN),
+     DEFINE_KEYCODE(SYSTEM_NAVIGATION_LEFT),
+     DEFINE_KEYCODE(SYSTEM_NAVIGATION_RIGHT),
++    DEFINE_KEYCODE(SMART_KEY),
+ 
+     { NULL, 0 }
+ };
